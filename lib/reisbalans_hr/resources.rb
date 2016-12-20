@@ -7,15 +7,12 @@ module ReisbalansHR
       @path = path
     end
 
-    def index(filter = '')
-      get url_with_filter(filter)
+    def index
+      get base_url
     end
 
-    def find_one!(filter)
-      res = index(filter)
-      fail "Could not find #{resource_name} with filter [#{filter}]" if res.empty?
-      fail "Expected 1 #{resource_name}, but got #{results.size} with filter [#{filter}]" if res.size > 1
-      res.first
+    def show(id)
+      get [base_url, id].join('/')
     end
 
     def create(params, &block)
@@ -43,12 +40,6 @@ module ReisbalansHR
 
     def base_url
       "/api/hr#{path}"
-    end
-
-    def url_with_filter(filter)
-      url = base_url
-      url << "?$filter=#{filter}" unless filter.empty?
-      url
     end
 
     def assert_status_code!(response, code)

@@ -27,18 +27,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"980b001fb33ac0d2a86de52a01f5d408"
+      - W/"9608abcc2d4c02daad06dc3641077e11"
       X-Request-Id:
-      - d3a3f565-e709-41dd-b420-2ed1e2762a36
+      - 805c419e-5de1-4255-9ec2-3d01d0f652ce
       X-Runtime:
-      - '0.027210'
+      - '0.015853'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"access_token":"053da54c6c32a51e9924ecf623c056e1218a55c2bb4c28a27c37890191bfa496","token_type":"bearer","expires_in":7200,"scope":"hr","created_at":1482239148}'
+      string: '{"access_token":"7ad94381f0e9d442b46a6aa1d1bb0eb8287f6119cf23e10c7c827a7d9f0c4ac0","token_type":"bearer","expires_in":7200,"scope":"hr","created_at":1482244800}'
     http_version: 
-  recorded_at: Tue, 20 Dec 2016 13:05:48 GMT
+  recorded_at: Tue, 20 Dec 2016 14:40:00 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/hr/employees
@@ -64,14 +64,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 961bca39-7893-43bd-89e5-b0f898fb005f
+      - d5d7e0ae-bc4e-423f-9add-3f5fe4ddb6d6
       X-Runtime:
-      - '0.018710'
+      - '0.021068'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '[{"name":"foo"}]'
     http_version: 
-  recorded_at: Tue, 20 Dec 2016 13:05:48 GMT
+  recorded_at: Tue, 20 Dec 2016 14:40:00 GMT
 recorded_with: VCR 3.0.3

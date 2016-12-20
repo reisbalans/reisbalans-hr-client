@@ -15,18 +15,6 @@ module ReisbalansHR
       Employees.new(oauth2_client)
     end
 
-    # def salary_employment
-    #   SalaryEmployment.new(oauth2_client)
-    # end
-
-    # def salary_component
-    #   SalaryComponent.new(oauth2_client)
-    # end
-
-    # def company_salary_component
-    #   CompanySalaryComponent.new(oauth2_client)
-    # end
-
     def oauth2_client
       opts = {site: base_url, token_url: '/oauth/token'}
       OAuth2::Client.new(client_id, client_secret, opts)
