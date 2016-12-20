@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/oauth/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials&scope=hr
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"980b001fb33ac0d2a86de52a01f5d408"
+      X-Request-Id:
+      - d3a3f565-e709-41dd-b420-2ed1e2762a36
+      X-Runtime:
+      - '0.027210'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"053da54c6c32a51e9924ecf623c056e1218a55c2bb4c28a27c37890191bfa496","token_type":"bearer","expires_in":7200,"scope":"hr","created_at":1482239148}'
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 13:05:48 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/hr/employees
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"53cd3d6488d6989465e390a65f5739f3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 961bca39-7893-43bd-89e5-b0f898fb005f
+      X-Runtime:
+      - '0.018710'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"name":"foo"}]'
+    http_version: 
+  recorded_at: Tue, 20 Dec 2016 13:05:48 GMT
+recorded_with: VCR 3.0.3
