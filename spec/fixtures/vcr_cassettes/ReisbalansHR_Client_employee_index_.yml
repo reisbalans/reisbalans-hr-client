@@ -27,18 +27,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9608abcc2d4c02daad06dc3641077e11"
+      - W/"79aa9417c10101757aa332f87cbc8508"
       X-Request-Id:
-      - 805c419e-5de1-4255-9ec2-3d01d0f652ce
+      - dee6173d-0833-4ea0-81e0-56c86ddb17bc
       X-Runtime:
-      - '0.015853'
+      - '0.017244'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"access_token":"7ad94381f0e9d442b46a6aa1d1bb0eb8287f6119cf23e10c7c827a7d9f0c4ac0","token_type":"bearer","expires_in":7200,"scope":"hr","created_at":1482244800}'
+      string: '{"access_token":"0993ce0553a20cd22fba9eef5bb209e4383ba6431c2624a6c47e24e866960896","token_type":"bearer","expires_in":7200,"scope":"hr","created_at":1482324408}'
     http_version: 
-  recorded_at: Tue, 20 Dec 2016 14:40:00 GMT
+  recorded_at: Wed, 21 Dec 2016 12:46:48 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/hr/employees
@@ -60,18 +60,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"53cd3d6488d6989465e390a65f5739f3"
+      - W/"97f6b29fa9f6bf4944d76720b40a8d11"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d5d7e0ae-bc4e-423f-9add-3f5fe4ddb6d6
+      - dbcf2164-e4ac-4cd1-8be6-f5a714a43b71
       X-Runtime:
-      - '0.021068'
+      - '0.081198'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '[{"name":"foo"}]'
+      string: '[{"employee":{"id":2,"employee_number":"011011","email":"daan.reiziger@workaway.nl","gender":"M","initials":"D","first_name":"Daan","infix":null,"last_name":"Reiziger","date_of_birth":"1986-12-21","phone_number":null,"home_street":"Vogelkerslaan","home_street_number":"30","home_street_number_suffix":null,"home_zipcode":"2251GJ","home_city":"Voorschoten","work_street":"Barchman
+        Wuytierslaan","work_street_number":"10","work_street_number_suffix":null,"work_zipcode":"3818LH","work_city":"Amersfoort","works_on":"1,2,3,4,5","invite_at":"2016-12-20T12:18:08+01:00","accounting_profiles":[],"manager":{"id":1,"email":"ronald.rotteveel@workaway.nl","employee_number":null},"budget_profiles":[{"starts_on":"2013-01-01","ends_on":null,"budget_group_name":"Budgethouders"}]}},{"employee":{"id":1,"employee_number":null,"email":"ronald.rotteveel@workaway.nl","gender":"M","initials":"D","first_name":"Ronald","infix":null,"last_name":"Rotteveel","date_of_birth":"1986-12-21","phone_number":null,"home_street":"Vogelkerslaan","home_street_number":"30","home_street_number_suffix":null,"home_zipcode":"2251GJ","home_city":"Voorschoten","work_street":"Barchman
+        Wuytierslaan","work_street_number":"10","work_street_number_suffix":null,"work_zipcode":"3818LH","work_city":"Amersfoort","works_on":"1,2,3,4,5","invite_at":"2016-12-20T12:18:08+01:00","accounting_profiles":[{"starts_on":"2016-12-20","ends_on":null,"cost_center":"123","department":"IT"}],"manager":null,"budget_profiles":[{"starts_on":"2014-01-01","ends_on":null,"budget_group_name":"Budgethouders"}]}}]'
     http_version: 
-  recorded_at: Tue, 20 Dec 2016 14:40:00 GMT
+  recorded_at: Wed, 21 Dec 2016 12:46:48 GMT
 recorded_with: VCR 3.0.3
