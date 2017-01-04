@@ -1,0 +1,151 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/oauth/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials&scope=hr
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"15bdc9d1756ceeddb9156b108b6d4d3c"
+      X-Request-Id:
+      - a06d11b9-5aca-4507-b9f7-58261de74193
+      X-Runtime:
+      - '0.025826'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"79159823e6779608bdf56624f9af481a8171f66afb5b57c1829a38b2f274ce8d","token_type":"bearer","expires_in":7200,"scope":"hr","created_at":1483533499}'
+    http_version: 
+  recorded_at: Wed, 04 Jan 2017 12:38:19 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/hr/organization_intermediate_settlements
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ba1088fec363b2b8f93bd452a61a0c1c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dfe5a66d-026a-4dfc-8813-e9a310d76d99
+      X-Runtime:
+      - '0.094816'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"organization_intermediate_settlement":{"id":1,"effective_on":"2017-01-01","committed_at":"2017-01-04T13:14:02+01:00","amount":"0.0"}}]'
+    http_version: 
+  recorded_at: Wed, 04 Jan 2017 12:38:19 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/oauth/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials&scope=hr
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3a0c18ae10167df6e7b3b125c6dbeedd"
+      X-Request-Id:
+      - a7cea4bc-5654-4a58-8fdb-0bdd7ee826ed
+      X-Runtime:
+      - '0.022057'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"b1d6a420c31b020486ff76c5cc358abcc1012b952c52c84e035922f5cca0f988","token_type":"bearer","expires_in":7200,"scope":"hr","created_at":1483533499}'
+    http_version: 
+  recorded_at: Wed, 04 Jan 2017 12:38:19 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/hr/organization_intermediate_settlements/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a5180b5e1d3fa1cdefc2453b928f7105"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b81b30d7-f6e2-4ded-8d78-821925b4ee10
+      X-Runtime:
+      - '0.072102'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"organization_intermediate_settlement":{"id":1,"effective_on":"2017-01-01","committed_at":"2017-01-04T13:14:02+01:00","amount":"0.0","employee_intermediate_settlements":[{"id":44,"employee":{"id":2,"email":"daan.reiziger@workaway.nl","employee_number":"011011"}},{"id":45,"employee":{"id":1,"email":"ronald.rotteveel@workaway.nl","employee_number":null}}]}}'
+    http_version: 
+  recorded_at: Wed, 04 Jan 2017 12:38:19 GMT
+recorded_with: VCR 3.0.3
