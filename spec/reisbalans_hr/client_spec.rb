@@ -82,5 +82,52 @@ describe ReisbalansHR::Client, :integration do
       subject { client.employees.show(2) }
       its(["employee", "email"]) { is_expected.to eq("daan.reiziger@workaway.nl") }
     end
+
+    describe "#create" do
+      let(:employee_params) do
+        {
+          employee: {
+            email: "rudolf@reisbalans.nl",
+            first_name: "Rudolf",
+            last_name: "Rendier",
+            initials: "R",
+            infix: nil,
+            employee_number: "RR123",
+            works_on: "1,2,3,4,5",
+            manager_id: nil,
+            is_manager: false,
+            home_street: "Kalverstraat",
+            home_street_number: 1,
+            home_street_number_suffix: nil,
+            home_city: "Amsterdam",
+            home_zipcode: "1111AA",
+            work_street: "Cruquiusweg",
+            work_street_number: 1,
+            work_street_number_suffix: nil,
+            work_city: "Amsterdam",
+            work_zipcode: "1234AB",
+            invite_at: Date.new(2020, 1, 1),
+            date_of_birth: Date.new(1987, 11, 15),
+            gender: "M",
+            phone_number: "0611111111",
+            budget_profiles_attributes: {
+              0 => {
+                starts_on: Date.new(2020, 1, 1),
+                ends_on: nil,
+                commute_monthly_money_budget: 100,
+                commute_monthly_km_budget: 200,
+                budget_group_name: "Budgethouders"
+              }
+            }
+          }
+        }
+      end
+
+      it "creates the employee" do
+        client.employees.create(employee_params) do |response|
+          require 'pry'; binding.pry
+        end
+      end
+    end
   end
 end
