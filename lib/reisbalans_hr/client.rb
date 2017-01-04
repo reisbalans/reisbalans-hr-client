@@ -1,5 +1,7 @@
 require 'oauth2'
 require_relative 'employees'
+require_relative 'organization_intermediate_settlements'
+require_relative 'employee_intermediate_settlements'
 
 module ReisbalansHR
   class Client
@@ -13,6 +15,14 @@ module ReisbalansHR
 
     def employees
       Employees.new(oauth2_client)
+    end
+
+    def organization_intermediate_settlements
+      OrganizationIntermediateSettlements.new(oauth2_client)
+    end
+
+    def employee_intermediate_settlements
+      EmployeeIntermediateSettlements.new(oauth2_client)
     end
 
     def oauth2_client

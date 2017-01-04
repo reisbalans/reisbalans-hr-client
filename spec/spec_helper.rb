@@ -27,10 +27,10 @@ RSpec.configure do |config|
 
   config.include VcrHelpers, :integration
 
-  config.around(:each, :integration) do |example|
-    request_matchers = [:method, match_uri_without_basic_auth]
-    VCR.use_cassette(example.metadata[:full_description], match_requests_on: request_matchers) do
-      example.run
-    end
-  end
+  # config.around(:each, :integration) do |example|
+  #   request_matchers = [:method, match_uri_without_basic_auth]
+  #   VCR.use_cassette(example.metadata[:full_description], match_requests_on: request_matchers) do
+  #     example.run
+  #   end
+  # end
 end
