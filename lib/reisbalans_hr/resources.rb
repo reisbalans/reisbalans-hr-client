@@ -19,6 +19,10 @@ module ReisbalansHR
       post base_url, {body: params}, &block
     end
 
+    def update(id, params, &block)
+      put [base_url, id].join('/'), {body: params}, &block
+    end
+
     private
 
     def access_token
@@ -34,8 +38,13 @@ module ReisbalansHR
     def post(url, opts, &_block)
       response = access_token.post(url, opts)
       yield response if block_given?
-      assert_status_code!(response, 201)
-      JSON.parse(response.body)
+      assert_status_code!(response, 204)
+    end
+
+    def put(url, opts, &_block)
+      response = access_token.put(url, opts)
+      yield response if block_given?
+      assert_status_code!(response, 204)
     end
 
     def base_url
