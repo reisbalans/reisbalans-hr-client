@@ -2,7 +2,7 @@ require_relative "../spec_helper"
 require_relative "../../lib/reisbalans_hr"
 
 describe ReisbalansHR::Employees, :integration do
-  let(:client) { ReisbalansHR.client }
+  let(:client) { ReisbalansHR.client(base_url: 'http://localhost:3000', client_id: 'client_id', client_secret: 'client_secret') }
 
   describe "#employee" do
     describe "#index" do
