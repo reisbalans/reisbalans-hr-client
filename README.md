@@ -1,4 +1,4 @@
-# [Reisbalans](htps://www.reisbalans.nl) HR API Client
+# [Reisbalans](htps://www.reisbalans.nl) HR API Ruby Client
 
 Ruby client for the Reisbalans HR JSON API. Authenticates via OAuth. To get your own Oauth keys, contact Reisbalans.
 
