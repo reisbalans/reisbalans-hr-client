@@ -2,7 +2,7 @@
 
 Ruby client for the Reisbalans HR JSON API. Authenticates via OAuth. To get your own Oauth keys, contact Reisbalans.
 
-For more information on what the API looks like see the API docs: https://mijn.reisbalans.nl/api-doc/hr/
+For more information on what the API looks like see the API docs: http://mijn.reisbalans.nl/api-doc/hr/
 (You need to be logged in to the organization admin to view the documentation)
 
 ## Setup
